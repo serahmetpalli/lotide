@@ -26,6 +26,8 @@ const without = function(source,itemsToRemove){
     for (let j=0; j<itemsToRemove.length; j++) {
       if (newArr[i] === itemsToRemove[j]) {
       newArr.splice(i,1);
+      i--;
+      j--;
       }
     }
   }
@@ -34,4 +36,5 @@ const without = function(source,itemsToRemove){
 
 console.log(without([1, 2, 3], [1])) // => [2, 3]
 console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
+console.log(without([50, 14, 2, 20, 4, 5, 2, 20, 10, 5], [5, 20]))
 
